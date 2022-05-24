@@ -1,0 +1,18 @@
+pre-commit:
+  parallel: true
+  commands:
+    prettier:
+      run: npx prettier --check {staged_files}
+    eslint:
+      glob: '*.{js,ts,jsx,tsx}'
+      run: npm run lint
+    stylelint:
+      glob: '*.{css,tsx}'
+      run: npm run lint:css
+    remark-lint:
+      glob: '*.{md,markdown}'
+      run: npm run lint:md
+    cspell:
+      run: npm run check:spell
+    test:
+      run: npm run test:ci

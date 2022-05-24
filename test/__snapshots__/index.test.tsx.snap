@@ -1,0 +1,134 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Home renders a heading 1`] = `
+<div>
+  <div
+    class="container"
+  >
+    <main
+      class="main"
+    >
+      <h1
+        class="title"
+      >
+        Welcome to 
+        <a
+          href="https://nextjs.org"
+        >
+          Next.js!
+        </a>
+      </h1>
+      <div
+        class="css-e53awj-MuiStack-root"
+      >
+        <button
+          class="MuiButton-root MuiButton-text MuiButton-textPrimary MuiButton-sizeMedium MuiButton-textSizeMedium MuiButtonBase-root  css-1e6y48t-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Text
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButton-root MuiButton-contained MuiButton-containedPrimary MuiButton-sizeMedium MuiButton-containedSizeMedium MuiButtonBase-root  css-sghohy-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Contained
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+        <button
+          class="MuiButton-root MuiButton-outlined MuiButton-outlinedPrimary MuiButton-sizeMedium MuiButton-outlinedSizeMedium MuiButtonBase-root  css-1rwt2y5-MuiButtonBase-root-MuiButton-root"
+          tabindex="0"
+          type="button"
+        >
+          Outlined
+          <span
+            class="MuiTouchRipple-root css-8je8zh-MuiTouchRipple-root"
+          />
+        </button>
+      </div>
+      <p
+        class="description"
+      >
+        ボタン
+      </p>
+      <p
+        class="description"
+      >
+        Get started by editing
+         
+        <code
+          class="code"
+        >
+          pages/index.tsx
+        </code>
+      </p>
+      <div
+        class="grid"
+      >
+        <a
+          class="card"
+          href="https://nextjs.org/docs"
+        >
+          <h2>
+            Documentation →
+          </h2>
+          <p>
+            Find in-depth information about Next.js features and API.
+          </p>
+        </a>
+        <a
+          class="card"
+          href="https://nextjs.org/learn"
+        >
+          <h2>
+            Learn →
+          </h2>
+          <p>
+            Learn about Next.js in an interactive course with quizzes!
+          </p>
+        </a>
+        <a
+          class="card"
+          href="https://github.com/vercel/next.js/tree/canary/examples"
+        >
+          <h2>
+            Examples →
+          </h2>
+          <p>
+            Discover and deploy boilerplate example Next.js projects.
+          </p>
+        </a>
+        <a
+          class="card"
+          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        >
+          <h2>
+            Deploy →
+          </h2>
+          <p>
+            Instantly deploy your Next.js site.
+          </p>
+        </a>
+      </div>
+    </main>
+    <footer
+      class="footer"
+    >
+      <a
+        href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        Powered by
+      </a>
+    </footer>
+  </div>
+   
+</div>
+`;

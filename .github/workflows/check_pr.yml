@@ -1,0 +1,27 @@
+name: Check the source code
+on:
+  pull_request:
+    branches:
+      - main
+jobs:
+  check:
+    name: Linters and Test
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: actions/setup-node@v3.2.0
+        with:
+          node-version: '16'
+      - run: npm ci
+      - name: Prettier
+        run: npm run format
+      - name: ESLint
+        run: npm run lint
+      - name: Stylelint
+        run: npm run lint:css
+      - name: remark-lint
+        run: npm run lint:md
+      - name: CSpell
+        run: npm run check:spell
+      - name: Test
+        run: npm run test:ci

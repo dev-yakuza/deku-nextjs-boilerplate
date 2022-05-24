@@ -1,0 +1,10 @@
+{
+  "words": ["lefthook", "stylelint"],
+  "ignorePaths": [
+    "__snapshots__",
+    "package.json",
+    "package-lock.json",
+    "node_modules",
+    "lefthook.yml"
+  ]
+}
