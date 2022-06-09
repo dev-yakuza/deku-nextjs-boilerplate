@@ -55,7 +55,18 @@ exports[`Home renders a heading 1`] = `
       <p
         class="description"
       >
-        ボタン
+        English
+         | 
+        Korean
+         | 
+        Japanese
+      </p>
+      <p>
+        English
+         | 
+        Korean
+         | 
+        Japanese
       </p>
       <p
         class="description"
@@ -129,6 +140,5 @@ exports[`Home renders a heading 1`] = `
       </a>
     </footer>
   </div>
-   
 </div>
 `;

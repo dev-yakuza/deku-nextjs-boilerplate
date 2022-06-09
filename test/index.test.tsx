@@ -1,14 +1,15 @@
 import { render, screen } from '@testing-library/react'
+import { I18nextProvider } from 'react-i18next'
+import i18n from 'utils/i18n'
+
 import Home from 'pages/index'
-import commonJA from 'locales/ja/common.json'
-import I18nProvider from 'next-translate/I18nProvider'
 
 describe('Home', () => {
   it('renders a heading', () => {
     const { container } = render(
-      <I18nProvider lang="en" namespaces={{ common: commonJA }}>
-        <Home />{' '}
-      </I18nProvider>,
+      <I18nextProvider i18n={i18n}>
+        <Home />
+      </I18nextProvider>,
     )
 
     const heading = screen.getByRole('heading', {
