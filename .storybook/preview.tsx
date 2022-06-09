@@ -1,23 +1,12 @@
 import '../styles/globals.css'
-import I18nProvider from 'next-translate/I18nProvider'
+import { I18nextProvider } from 'react-i18next'
 import { ThemeProvider } from '@mui/material'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 
-import i18nConfig from '../i18n.json'
+import i18n from '../utils/i18n'
+import { i18n as i18nConfig } from '../next-i18next.config'
 import { theme } from '../utils/theme'
-
-const namespaces = [...new Set(Object.values(i18nConfig.pages).flat())]
-const translations = Object.assign(
-  {},
-  ...i18nConfig.locales.map((locale) => ({
-    [locale]: Object.assign(
-      {},
-      ...namespaces.map((ns) => ({
-        [ns]: require(`../locales/${locale}/${ns}.json`),
-      })),
-    ),
-  })),
-)
+import { useEffect } from 'react'
 
 export const globalTypes = {
   locale: {
@@ -26,22 +15,29 @@ export const globalTypes = {
     defaultValue: i18nConfig.defaultLocale,
     toolbar: {
       icon: 'globe',
-      items: [{ value: 'ja', right: 'JA', title: '日本語' }],
+      items: [
+        { value: 'en', right: 'EN', title: 'English' },
+        { value: 'ko', right: 'KO', title: '한국어' },
+        { value: 'ja', right: 'JA', title: '日本語' },
+      ],
     },
   },
 }
 
 export const decorators = [
-  (Story, { globals }) => (
-    <ThemeProvider theme={theme}>
-      <I18nProvider
-        lang={globals.locale}
-        namespaces={translations[globals.locale]}
-      >
-        <Story />
-      </I18nProvider>
-    </ThemeProvider>
-  ),
+  (Story, { globals }) => {
+    useEffect(() => {
+      i18n.changeLanguage(globals.locale)
+    }, [globals.locale])
+
+    return (
+      <I18nextProvider i18n={i18n}>
+        <ThemeProvider theme={theme}>
+          <Story />
+        </ThemeProvider>
+      </I18nextProvider>
+    )
+  },
 ]
 
 export const parameters = {

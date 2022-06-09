@@ -1,9 +1,11 @@
-import type { NextPage } from 'next'
+import type { NextPage, GetStaticProps } from 'next'
 import Head from 'next/head'
-import Image from 'next/image'
 import styles from 'styles/Home.module.css'
-import useTranslation from 'next-translate/useTranslation'
+import { i18n } from 'next-i18next.config'
+import { useTranslation } from 'next-i18next'
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
 import { Stack, Button } from '@mui/material'
+import { SampleLocale } from 'components/SampleLocale'
 
 const Home: NextPage = () => {
   const { t } = useTranslation()
@@ -27,7 +29,10 @@ const Home: NextPage = () => {
           <Button variant="outlined">Outlined</Button>
         </Stack>
 
-        <p className={styles.description}>{t('common:ボタン')}</p>
+        <p className={styles.description}>
+          {t('English')} | {t('Korean')} | {t('Japanese')}
+        </p>
+        <SampleLocale />
 
         <p className={styles.description}>
           Get started by editing{' '}
@@ -77,3 +82,15 @@ const Home: NextPage = () => {
 }
 
 export default Home
+
+export const getStaticProps: GetStaticProps = async ({ locale, params }) => {
+  const defaultLocale = (locale ||
+    params?.locale ||
+    i18n.defaultLocale) as string
+
+  return {
+    props: {
+      ...(await serverSideTranslations(defaultLocale, ['common'])),
+    },
+  }
+}

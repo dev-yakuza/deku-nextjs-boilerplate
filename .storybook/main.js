@@ -16,6 +16,14 @@ module.exports = {
     emotionAlias: false,
   },
   webpackFinal: async (config) => {
+    config.resolve = {
+      ...config.resolve,
+      fallback: {
+        ...(config.resolve || {}).fallback,
+        fs: false,
+      },
+    }
+
     config.resolve.plugins = [
       ...(config.resolve.plugins || []),
       new TsconfigPathsPlugin({
