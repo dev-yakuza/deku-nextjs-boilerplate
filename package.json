@@ -73,7 +73,7 @@
     "eslint": "8.16.0",
     "eslint-config-next": "12.1.6",
     "eslint-plugin-storybook": "^0.5.11",
-    "jest": "^28.1.0",
+    "jest": "^28.1.1",
     "jest-environment-jsdom": "^28.1.0",
     "postcss-syntax": "^0.36.2",
     "prettier": "^2.6.2",
