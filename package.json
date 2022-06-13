@@ -82,7 +82,7 @@
     "remark-preset-lint-recommended": "^6.1.2",
     "sb": "^6.5.8",
     "storybook-addon-next-router": "^4.0.0",
-    "stylelint": "^14.8.3",
+    "stylelint": "^14.9.1",
     "stylelint-config-prettier": "^9.0.3",
     "stylelint-config-standard": "^25.0.0",
     "tsconfig-paths-webpack-plugin": "^3.5.2",
