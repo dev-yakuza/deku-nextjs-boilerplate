@@ -2,14 +2,11 @@ import { Button } from '@mui/material'
 import type { ButtonProps } from '@mui/material'
 import styled from '@emotion/styled'
 
-const StyledButton = styled(
-  ({
-    backgroundColor,
-    ...props
-  }: Pick<Props, 'backgroundColor'> & ButtonProps) => <Button {...props} />,
-)`
-  ${(props) =>
-    props.backgroundColor ? `background-color: ${props.backgroundColor};` : ''}
+const StyledButton = styled(Button, {
+  shouldForwardProp: (propName) => propName !== 'backgroundColor',
+})<Pick<Props, 'backgroundColor'> & ButtonProps>`
+  ${({ backgroundColor }) =>
+    backgroundColor ? `background-color: ${backgroundColor};` : ''}
 `
 
 interface Props {
