@@ -41,7 +41,7 @@
     "@emotion/styled": "^11.10.0",
     "@mui/icons-material": "^5.10.2",
     "@mui/material": "^5.10.2",
-    "@mui/x-data-grid": "^5.15.3",
+    "@mui/x-data-grid": "^5.16.0",
     "@tanstack/react-query": "^4.2.1",
     "axios": "^0.27.2",
     "next": "12.2.5",
@@ -52,7 +52,7 @@
   },
   "devDependencies": {
     "@arkweid/lefthook": "^0.7.7",
-    "@babel/core": "^7.18.10",
+    "@babel/core": "^7.18.13",
     "@emotion/jest": "^11.10.0",
     "@storybook/addon-actions": "^6.5.9",
     "@storybook/addon-essentials": "^6.5.10",
