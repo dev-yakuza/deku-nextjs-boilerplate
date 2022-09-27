@@ -67,7 +67,7 @@
     "@testing-library/react": "^13.4.0",
     "@types/node": "18.7.18",
     "@types/react": "18.0.21",
-    "@typescript-eslint/eslint-plugin": "^5.37.0",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
     "axios-mock-adapter": "^1.21.2",
     "babel-loader": "^8.2.5",
     "cspell": "^6.10.1",
