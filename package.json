@@ -70,7 +70,7 @@
     "@typescript-eslint/eslint-plugin": "^5.37.0",
     "axios-mock-adapter": "^1.21.2",
     "babel-loader": "^8.2.5",
-    "cspell": "^6.10.0",
+    "cspell": "^6.10.1",
     "eslint": "8.23.1",
     "eslint-config-next": "12.3.0",
     "eslint-plugin-storybook": "^0.6.4",
