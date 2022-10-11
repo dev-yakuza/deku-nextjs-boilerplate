@@ -1,6 +1,6 @@
+import styled from '@emotion/styled'
 import { Button } from '@mui/material'
 import type { ButtonProps } from '@mui/material'
-import styled from '@emotion/styled'
 
 const StyledButton = styled(Button, {
   shouldForwardProp: (propName) => propName !== 'backgroundColor',

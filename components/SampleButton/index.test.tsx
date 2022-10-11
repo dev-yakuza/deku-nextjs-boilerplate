@@ -1,4 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react'
+
 import { SampleButton } from './index'
 
 const mockButton = jest.fn()
