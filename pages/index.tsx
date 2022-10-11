@@ -1,11 +1,12 @@
+import { Stack, Button } from '@mui/material'
 import type { NextPage, GetStaticProps } from 'next'
-import Head from 'next/head'
-import styles from 'styles/Home.module.css'
-import { i18n } from 'next-i18next.config'
 import { useTranslation } from 'next-i18next'
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations'
-import { Stack, Button } from '@mui/material'
+import Head from 'next/head'
+
 import { SampleLocale } from 'components/SampleLocale'
+import { i18n } from 'next-i18next.config'
+import styles from 'styles/Home.module.css'
 
 const Home: NextPage = () => {
   const { t } = useTranslation()
