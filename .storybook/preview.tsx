@@ -51,4 +51,5 @@ export const parameters = {
   nextRouter: {
     Provider: RouterContext.Provider,
   },
+  layout: 'fullscreen',
 }
