@@ -9,11 +9,15 @@ exports[`<Header /> Rendered well 1`] = `
     <div
       class="MuiToolbar-root MuiToolbar-gutters MuiToolbar-regular css-1r339ym-MuiToolbar-root"
     >
-      <h6
-        class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-uh02xs-MuiTypography-root"
+      <a
+        href="/"
       >
-        Blog App
-      </h6>
+        <h6
+          class="MuiTypography-root MuiTypography-h6 MuiTypography-noWrap css-uh02xs-MuiTypography-root"
+        >
+          Blog App
+        </h6>
+      </a>
     </div>
   </header>
 </div>
