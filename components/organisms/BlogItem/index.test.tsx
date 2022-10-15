@@ -1,6 +1,6 @@
 import { render } from '@testing-library/react'
 
-import { mockGrid } from 'utils/test/mocks'
+import { mockGrid } from 'utils/test'
 
 import { BlogItem } from '.'
 

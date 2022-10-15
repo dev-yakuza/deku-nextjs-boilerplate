@@ -1,6 +1,7 @@
-import { render } from '@testing-library/react'
+import { render, screen, fireEvent } from '@testing-library/react'
+import { RouterContext } from 'next/dist/shared/lib/router-context'
 
-import { mockAppBar } from 'utils/test/mocks'
+import { mockAppBar, getMockRouter } from 'utils/test'
 
 import { Header } from '.'
 
@@ -33,5 +34,21 @@ describe('<Header />', () => {
     expect(appTitle.props.children).toBe('Blog App')
 
     expect(container).toMatchSnapshot()
+  })
+
+  it('Go to the root page when the app title is clicked', async () => {
+    const routerPush = jest.fn()
+    const mockRouter = getMockRouter()
+    mockRouter.push = routerPush
+
+    render(
+      <RouterContext.Provider value={mockRouter}>
+        <Header />
+      </RouterContext.Provider>,
+    )
+
+    expect(routerPush).not.toBeCalled()
+    fireEvent.click(screen.getByText('Blog App'))
+    expect(routerPush.mock.calls[0][0]).toBe('/')
   })
 })
