@@ -19,7 +19,12 @@ describe('<Header />', () => {
     expect(toolbar.type.name).toBe('Toolbar')
     expect(toolbar.props.sx).toEqual({ flexWrap: 'wrap' })
 
-    const appTitle = toolbar.props.children
+    const appTitleLink = toolbar.props.children
+    expect(appTitleLink.type.render.name).toBe('LinkComponent')
+    expect(appTitleLink.props.href).toBe('/')
+    expect(appTitleLink.props.children.type).toBe('a')
+
+    const appTitle = appTitleLink.props.children.props.children
     expect(appTitle.type.name).toBe('Typography')
     expect(appTitle.props.variant).toBe('h6')
     expect(appTitle.props.color).toBe('inherit')
