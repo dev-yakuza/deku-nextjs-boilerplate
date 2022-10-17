@@ -5,16 +5,20 @@ exports[`<BlogItem /> Rendered well 1`] = `
   <div
     class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-12 css-1h6d3gi-MuiGrid-root"
   >
-    <p
-      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+    <a
+      href="/posts/20"
     >
-      This is the blog title.
-    </p>
-    <p
-      class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
-    >
-      This is the blog contents.
-    </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+      >
+        This is the blog title.
+      </p>
+      <p
+        class="MuiTypography-root MuiTypography-body1 css-ahj2mt-MuiTypography-root"
+      >
+        This is the blog contents.
+      </p>
+    </a>
   </div>
 </div>
 `;

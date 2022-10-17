@@ -1,5 +1,6 @@
 import styled from '@emotion/styled'
 import { Grid, Typography } from '@mui/material'
+import Link from 'next/link'
 
 const Container = styled(Grid)`
   background-color: #fff;
@@ -10,15 +11,20 @@ const Container = styled(Grid)`
 `
 
 interface Props {
+  readonly id: number
   readonly title: string
   readonly contents: string
 }
 
-export const BlogItem = ({ title, contents }: Props) => {
+export const BlogItem = ({ id, title, contents }: Props) => {
   return (
     <Container item xs={12}>
-      <Typography>{title}</Typography>
-      <Typography>{contents}</Typography>
+      <Link href={`/posts/${id}`}>
+        <a>
+          <Typography>{title}</Typography>
+          <Typography>{contents}</Typography>
+        </a>
+      </Link>
     </Container>
   )
 }
