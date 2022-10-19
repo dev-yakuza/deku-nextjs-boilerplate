@@ -1,9 +1,9 @@
-# Admin
+# Deku NextJS Boilerplate
 
 This project uses the followings:
 
 - React framework: [NextJS](https://nextjs.org/)
-- React UI library: [MUI](https://mui.com/), [Emotion](https://emotion.sh//)
+- React UI library: [MUI](https://mui.com/), [Emotion](https://emotion.sh/)
 - Component driven development: [Storybook](https://storybook.js.org/)
 - Calling API: [Axios](https://axios-http.com/), [React Query](https://tanstack.com/query/v4/)
 - State management: [Recoil](https://recoiljs.org/)
