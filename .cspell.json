@@ -1,5 +1,5 @@
 {
-  "words": ["lefthook", "stylelint"],
+  "words": ["lefthook", "stylelint", "Deku"],
   "ignorePaths": [
     "__snapshots__",
     "package.json",
