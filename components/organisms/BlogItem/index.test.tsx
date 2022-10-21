@@ -20,7 +20,7 @@ describe('<BlogItem />', () => {
     expect(grid.xs).toBe(12)
 
     const link = grid.children
-    expect(link.type.render.name).toBe('LinkComponent')
+    expect(link.type.name).toBe('Link')
     expect(link.props.href).toBe('/posts/20')
     expect(link.props.children.type).toBe('a')
 

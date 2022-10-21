@@ -27,4 +27,17 @@ const getMockRouter = (path = '/'): NextRouter => {
   }
 }
 
-export { useRouter, getMockRouter }
+const mockLink = jest.fn()
+
+jest.mock('next/link', () => {
+  const NextJSLink = jest.requireActual('next/link')
+
+  const Link = (props: typeof NextJSLink) => {
+    mockLink(props)
+    return <NextJSLink {...props} />
+  }
+
+  return Link
+})
+
+export { useRouter, getMockRouter, mockLink }

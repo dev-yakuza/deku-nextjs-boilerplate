@@ -21,7 +21,7 @@ describe('<Header />', () => {
     expect(toolbar.props.sx).toEqual({ flexWrap: 'wrap' })
 
     const appTitleLink = toolbar.props.children
-    expect(appTitleLink.type.render.name).toBe('LinkComponent')
+    expect(appTitleLink.type.name).toBe('Link')
     expect(appTitleLink.props.href).toBe('/')
     expect(appTitleLink.props.children.type).toBe('a')
 
