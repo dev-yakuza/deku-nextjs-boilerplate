@@ -143,7 +143,7 @@ exports[`<FloatingActionLink /> Rendered well with icon 1`] = `
 <div>
   <button
     aria-label="add"
-    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-0"
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-0"
     tabindex="0"
     type="button"
   >
@@ -291,7 +291,7 @@ exports[`<FloatingActionLink /> Rendered well with string 1`] = `
 <div>
   <button
     aria-label="add"
-    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-0"
+    class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-0"
     tabindex="0"
     type="button"
   >
