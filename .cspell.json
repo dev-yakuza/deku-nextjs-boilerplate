@@ -1,10 +1,11 @@
 {
-  "words": ["lefthook", "stylelint", "Deku"],
+  "words": ["lefthook", "stylelint", "Deku", "tanstack"],
   "ignorePaths": [
     "__snapshots__",
     "package.json",
     "package-lock.json",
     "node_modules",
-    "lefthook.yml"
+    "lefthook.yml",
+    "api/posts/mockData/posts.json"
   ]
 }
