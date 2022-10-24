@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<PageContainer /> Rendered well with component 1`] = `
+.emotion-0 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #eee;
+  overflow: scroll;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    <h1>
+      This is PageContainer
+    </h1>
+  </div>
+</div>
+`;
+
+exports[`<PageContainer /> Rendered well with string 1`] = `
+.emotion-0 {
+  height: 100vh;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  background-color: #eee;
+  overflow: scroll;
+}
+
+<div>
+  <div
+    class="MuiBox-root emotion-0"
+  >
+    This is PageContainer
+  </div>
+</div>
+`;
