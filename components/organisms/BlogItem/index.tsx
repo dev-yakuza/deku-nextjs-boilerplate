@@ -10,7 +10,7 @@ const Container = styled(Grid)`
   box-shadow: 10px 10px 30px #d9d9d9, -10px -10px 30px #fff;
 `
 
-interface Props {
+export interface Props {
   readonly id: number
   readonly title: string
   readonly contents: string

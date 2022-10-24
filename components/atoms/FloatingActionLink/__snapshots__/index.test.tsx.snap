@@ -54,7 +54,7 @@ exports[`<FloatingActionLink /> Rendered well with icon 1`] = `
   background-color: #e0e0e0;
   color: #fff;
   background-color: #1976d2;
-  position: absolute;
+  position: fixed;
   right: 40px;
   bottom: 40px;
 }
@@ -219,7 +219,7 @@ exports[`<FloatingActionLink /> Rendered well with string 1`] = `
   background-color: #e0e0e0;
   color: #fff;
   background-color: #1976d2;
-  position: absolute;
+  position: fixed;
   right: 40px;
   bottom: 40px;
 }
