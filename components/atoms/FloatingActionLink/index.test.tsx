@@ -19,7 +19,7 @@ describe('<FloatingActionLink />', () => {
     expect(button.type.render.displayName).toBe('Styled(Component)')
 
     const style = button.type.__emotion_styles[0]
-    expect(style.includes('position: absolute;')).toBe(true)
+    expect(style.includes('position: fixed;')).toBe(true)
     expect(style.includes('right: 40px;')).toBe(true)
     expect(style.includes('bottom: 40px;')).toBe(true)
 
@@ -45,7 +45,7 @@ describe('<FloatingActionLink />', () => {
     expect(button.type.render.displayName).toBe('Styled(Component)')
 
     const style = button.type.__emotion_styles[0]
-    expect(style.includes('position: absolute;')).toBe(true)
+    expect(style.includes('position: fixed;')).toBe(true)
     expect(style.includes('right: 40px;')).toBe(true)
     expect(style.includes('bottom: 40px;')).toBe(true)
     expect(button.type.__emotion_base.render.name).toBe('Fab')

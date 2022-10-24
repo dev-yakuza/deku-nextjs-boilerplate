@@ -3,7 +3,7 @@ import { styled } from '@mui/system'
 import Link from 'next/link'
 
 const Button = styled(Fab)`
-  position: absolute;
+  position: fixed;
   right: 40px;
   bottom: 40px;
 `
