@@ -1,12 +1,14 @@
 import { render } from '@testing-library/react'
 
-import { mockGrid } from 'utils/test'
+import { mockToolbar, mockGrid } from 'utils/test'
 
 import { BlogList } from '.'
 
 describe('<BlogList />', () => {
   it('Rendered well with no data', async () => {
     const { container } = render(<BlogList posts={undefined} />)
+
+    expect(mockToolbar.mock.calls.length).toBe(1)
 
     const grid = mockGrid.mock.calls[0][0]
     expect(grid.container).toBe(true)
@@ -40,6 +42,8 @@ describe('<BlogList />', () => {
         ]}
       />,
     )
+
+    expect(mockToolbar.mock.calls.length).toBe(1)
 
     const grid = mockGrid.mock.calls[0][0]
     const blogItem = grid.children[0]

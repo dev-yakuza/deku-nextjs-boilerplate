@@ -1,5 +1,5 @@
 import AddIcon from '@mui/icons-material/Add'
-import { Grid } from '@mui/material'
+import { Grid, Toolbar } from '@mui/material'
 
 import { FloatingActionLink } from 'components/atoms'
 import { BlogItem } from 'components/organisms'
@@ -11,19 +11,22 @@ interface Props {
 
 const BlogList = ({ posts = [] }: Props) => {
   return (
-    <Grid container>
-      {posts.map((blog) => (
-        <BlogItem
-          key={blog.id}
-          id={blog.id}
-          title={blog.title}
-          body={blog.body}
-        />
-      ))}
-      <FloatingActionLink link="/posts/add">
-        <AddIcon />
-      </FloatingActionLink>
-    </Grid>
+    <>
+      <Toolbar />
+      <Grid container>
+        {posts.map((blog) => (
+          <BlogItem
+            key={blog.id}
+            id={blog.id}
+            title={blog.title}
+            body={blog.body}
+          />
+        ))}
+        <FloatingActionLink link="/posts/add">
+          <AddIcon />
+        </FloatingActionLink>
+      </Grid>
+    </>
   )
 }
 
