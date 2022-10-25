@@ -10,19 +10,19 @@ const Container = styled(Grid)`
   box-shadow: 10px 10px 30px #d9d9d9, -10px -10px 30px #fff;
 `
 
-export interface Props {
+interface Props {
   readonly id: number
   readonly title: string
-  readonly contents: string
+  readonly body: string
 }
 
-export const BlogItem = ({ id, title, contents }: Props) => {
+export const BlogItem = ({ id, title, body }: Props) => {
   return (
     <Container item xs={12}>
       <Link href={`/posts/${id}`}>
         <a>
           <Typography>{title}</Typography>
-          <Typography>{contents}</Typography>
+          <Typography>{body}</Typography>
         </a>
       </Link>
     </Container>
