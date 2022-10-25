@@ -14,5 +14,5 @@ const Template: ComponentStory<typeof BlogItem> = (args) => (
 export const Default = Template.bind({})
 Default.args = {
   title: 'This is the blog title',
-  contents: 'This is the blog contents.',
+  body: 'This is the blog contents.',
 }

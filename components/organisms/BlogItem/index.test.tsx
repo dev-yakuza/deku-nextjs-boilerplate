@@ -11,7 +11,7 @@ describe('<BlogItem />', () => {
       <BlogItem
         id={20}
         title="This is the blog title."
-        contents="This is the blog contents."
+        body="This is the blog contents."
       />,
     )
 
@@ -45,7 +45,7 @@ describe('<BlogItem />', () => {
         <BlogItem
           id={40}
           title="This is the blog title."
-          contents="This is the blog contents."
+          body="This is the blog contents."
         />
       </RouterContext.Provider>,
     )
