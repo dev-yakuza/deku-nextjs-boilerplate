@@ -2,6 +2,7 @@ const mockAppBar = jest.fn()
 const mockToolbar = jest.fn()
 const mockTypography = jest.fn()
 const mockGrid = jest.fn()
+const mockSnackbar = jest.fn()
 
 jest.mock('@mui/material', () => {
   const {
@@ -9,6 +10,7 @@ jest.mock('@mui/material', () => {
     Toolbar: MUIToolbar,
     Typography: MUITypography,
     Grid: MUIGrid,
+    Snackbar: MUISnackbar,
     ...rest
   } = jest.requireActual('@mui/material')
 
@@ -32,13 +34,19 @@ jest.mock('@mui/material', () => {
     return <MUIGrid {...props} />
   }
 
+  const Snackbar = (props: typeof MUISnackbar) => {
+    mockSnackbar(props)
+    return <MUISnackbar {...props} />
+  }
+
   return {
     AppBar,
     Toolbar,
     Typography,
     Grid,
+    Snackbar,
     ...rest,
   }
 })
 
-export { mockAppBar, mockToolbar, mockTypography, mockGrid }
+export { mockAppBar, mockToolbar, mockTypography, mockGrid, mockSnackbar }
