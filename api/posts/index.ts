@@ -12,7 +12,22 @@ const getPosts = async (): Promise<ReadonlyArray<Post>> => {
 }
 
 export const useGetPosts = () => {
-  return useQuery(['GetPosts'], async () => getPosts(), {
+  return useQuery(['GetPosts'], () => getPosts(), {
+    refetchOnWindowFocus: false,
+  })
+}
+
+interface GetPostParams {
+  readonly id: number
+}
+const getPost = async ({ id }: GetPostParams): Promise<ReadonlyArray<Post>> => {
+  const response = await axios.get(`${POSTS_URL}/${id}`)
+
+  return response.data
+}
+
+export const useGetPost = ({ id }: GetPostParams) => {
+  return useQuery(['GetPost', id], () => getPost({ id }), {
     refetchOnWindowFocus: false,
   })
 }
