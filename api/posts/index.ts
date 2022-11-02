@@ -20,7 +20,7 @@ export const useGetPosts = () => {
 interface GetPostParams {
   readonly id: number
 }
-const getPost = async ({ id }: GetPostParams): Promise<ReadonlyArray<Post>> => {
+const getPost = async ({ id }: GetPostParams): Promise<Post> => {
   const response = await axios.get(`${POSTS_URL}/${id}`)
 
   return response.data
