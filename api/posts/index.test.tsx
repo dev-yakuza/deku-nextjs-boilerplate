@@ -112,4 +112,23 @@ describe('[API] useGetPost', () => {
 
     expect((result?.current.error as AxiosError).response?.status).toBe(400)
   })
+
+  it('idle', async () => {
+    const wrapper = ({ children }: { children: JSX.Element }) => (
+      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    )
+    let result:
+      | {
+          current: UseQueryResult<Post, unknown>
+        }
+      | undefined
+
+    await act(async () => {
+      result = renderHook(() => useGetPost({ id: null }), {
+        wrapper,
+      }).result
+    })
+
+    expect(result?.current.fetchStatus).toBe('idle')
+  })
 })
