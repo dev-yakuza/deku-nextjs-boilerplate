@@ -7,8 +7,7 @@ import { BlogDetail } from 'components/templates'
 const PostDetail: NextPage = () => {
   const router = useRouter()
   const { id } = router.query
-  const postID = typeof id === 'string' ? Number.parseInt(id) : null
-  const { data } = useGetPost({ id: postID })
+  const { data } = useGetPost({ id })
 
   return <BlogDetail post={data} />
 }
