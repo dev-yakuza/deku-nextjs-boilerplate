@@ -18,17 +18,31 @@ export const useGetPosts = () => {
 }
 
 interface GetPostParams {
-  readonly id: number | null
+  readonly id: string | string[] | undefined
 }
-const getPost = async ({ id }: GetPostParams): Promise<Post> => {
-  const response = await axios.get(`${POSTS_URL}/${id}`)
+
+const getPost = async ({
+  postID,
+}: {
+  readonly postID: number
+}): Promise<Post> => {
+  const response = await axios.get(`${POSTS_URL}/${postID}`)
 
   return response.data
 }
 
 export const useGetPost = ({ id }: GetPostParams) => {
-  return useQuery(['GetPost', id], () => getPost({ id }), {
-    refetchOnWindowFocus: false,
-    enabled: id != null,
-  })
+  const postID =
+    typeof id === 'string' && !isNaN(Number.parseInt(id))
+      ? Number.parseInt(id)
+      : null
+
+  return useQuery(
+    ['GetPost', id],
+    () => getPost({ postID: postID as number }),
+    {
+      refetchOnWindowFocus: false,
+      enabled: postID != null,
+    },
+  )
 }

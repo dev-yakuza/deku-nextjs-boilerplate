@@ -15,7 +15,12 @@ import PostDetail from '../../pages/posts/[id]'
 let mockResponse: { readonly data: Post | undefined } = {
   data: undefined,
 }
-jest.mock('api/posts', () => ({ useGetPost: () => mockResponse }))
+jest.mock('api/posts', () => ({
+  useGetPost: ({ id }: { readonly id: string | undefined }) =>
+    typeof id === 'string' && !isNaN(Number.parseInt(id))
+      ? mockResponse
+      : { data: undefined },
+}))
 
 describe('PostDetail', () => {
   beforeEach(() => {
@@ -62,6 +67,7 @@ describe('PostDetail', () => {
       id: 'aaa',
     }
     useRouter.mockImplementation(() => mockRouter)
+    mockResponse = { data: mockPostData }
 
     render(
       <QueryClientProvider client={queryClient}>
