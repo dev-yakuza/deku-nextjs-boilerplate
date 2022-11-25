@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`PostDetail rendered well with data 1`] = `
+exports[`<PostDetailPage /> rendered well with data 1`] = `
 .emotion-0 {
   position: relative;
   display: -webkit-box;
@@ -334,7 +334,7 @@ nostrum rerum est autem sunt rem eveniet architecto
 </div>
 `;
 
-exports[`PostDetail rendered well without data 1`] = `
+exports[`<PostDetailPage /> rendered well without data 1`] = `
 @keyframes animation-0 {
   0% {
     opacity: 1;

@@ -10,7 +10,7 @@ import {
   getMockRouter,
 } from 'utils/test'
 
-import PostDetail from '../../pages/posts/[id]'
+import PostDetailPage from '../../pages/posts/[id]'
 
 let mockResponse: { readonly data: Post | undefined } = {
   data: undefined,
@@ -22,7 +22,7 @@ jest.mock('api/posts', () => ({
       : { data: undefined },
 }))
 
-describe('PostDetail', () => {
+describe('<PostDetailPage />', () => {
   beforeEach(() => {
     const mockRouter = getMockRouter('/posts/1')
     mockRouter.query = {
@@ -36,7 +36,7 @@ describe('PostDetail', () => {
 
     const { container } = render(
       <QueryClientProvider client={queryClient}>
-        <PostDetail />
+        <PostDetailPage />
       </QueryClientProvider>,
     )
 
@@ -51,7 +51,7 @@ describe('PostDetail', () => {
 
     const { container } = render(
       <QueryClientProvider client={queryClient}>
-        <PostDetail />
+        <PostDetailPage />
       </QueryClientProvider>,
     )
 
@@ -71,7 +71,7 @@ describe('PostDetail', () => {
 
     render(
       <QueryClientProvider client={queryClient}>
-        <PostDetail />
+        <PostDetailPage />
       </QueryClientProvider>,
     )
 
