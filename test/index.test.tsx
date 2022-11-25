@@ -13,7 +13,7 @@ let mockResponse = {
 }
 jest.mock('api/posts', () => ({ useGetPosts: () => mockResponse }))
 
-describe('BlogListPage', () => {
+describe('<BlogListPage />', () => {
   it('rendered well with data', () => {
     mockResponse = { data: mockPostsData, isLoading: false }
 

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`BlogListPage rendered well with data 1`] = `
+exports[`<BlogListPage /> rendered well with data 1`] = `
 .emotion-0 {
   position: relative;
   display: -webkit-box;
@@ -516,7 +516,7 @@ quos veniam quod sed accusamus veritatis error
 </div>
 `;
 
-exports[`BlogListPage show loading when data is loading 1`] = `
+exports[`<BlogListPage /> show loading when data is loading 1`] = `
 @keyframes animation-0 {
   0% {
     -webkit-transform: rotate(0deg);
