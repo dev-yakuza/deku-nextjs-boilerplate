@@ -65,7 +65,7 @@
     "@stylelint/postcss-css-in-js": "^0.38.0",
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
-    "@types/node": "18.8.0",
+    "@types/node": "18.11.9",
     "@types/react": "18.0.21",
     "@typescript-eslint/eslint-plugin": "^5.38.1",
     "axios-mock-adapter": "^1.21.2",
