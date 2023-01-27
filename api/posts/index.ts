@@ -1,4 +1,5 @@
-import { useQuery } from '@tanstack/react-query'
+import { useMutation, useQuery } from '@tanstack/react-query'
+import type { AxiosError } from 'axios'
 import axios from 'axios'
 
 import type { Post } from 'types'
@@ -43,6 +44,42 @@ export const useGetPost = ({ id }: GetPostParams) => {
     {
       refetchOnWindowFocus: false,
       enabled: postID != null,
+    },
+  )
+}
+
+export interface CreatePostParams {
+  readonly userId: number
+  readonly title: string
+  readonly description: string
+}
+
+const createPost = async ({
+  userId,
+  title,
+  description,
+}: CreatePostParams): Promise<Post> => {
+  const response = await axios.post(POSTS_URL, {
+    userId,
+    title,
+    description,
+  })
+
+  return response.data
+}
+
+interface CreateOfferCallback {
+  readonly onSuccess?: (data: Post) => void
+  readonly onError?: (error: AxiosError) => void
+}
+
+export const useCreatePost = ({ onSuccess, onError }: CreateOfferCallback) => {
+  return useMutation(
+    async ({ userId, title, description }: CreatePostParams) =>
+      createPost({ userId, title, description }),
+    {
+      onSuccess,
+      onError,
     },
   )
 }
