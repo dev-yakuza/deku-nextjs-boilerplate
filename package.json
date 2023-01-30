@@ -84,7 +84,7 @@
     "remark-lint": "^9.1.1",
     "remark-preset-lint-recommended": "^6.1.2",
     "sb": "^6.5.12",
-    "storybook-addon-next-router": "^4.0.0",
+    "storybook-addon-next-router": "^4.0.2",
     "stylelint": "^14.14.0",
     "stylelint-config-prettier": "^9.0.4",
     "stylelint-config-standard": "^29.0.0",
