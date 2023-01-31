@@ -1,3 +1,5 @@
+import React from 'react'
+
 import '../styles/globals.css'
 import { I18nextProvider } from 'react-i18next'
 import { ThemeProvider } from '@mui/material'
@@ -7,6 +9,15 @@ import i18n from '../utils/i18n'
 import { i18n as i18nConfig } from '../next-i18next.config'
 import { theme } from '../utils/theme'
 import { useEffect } from 'react'
+import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
+
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      retry: false,
+    },
+  },
+})
 
 export const globalTypes = {
   locale: {
@@ -31,11 +42,13 @@ export const decorators = [
     }, [globals.locale])
 
     return (
-      <I18nextProvider i18n={i18n}>
-        <ThemeProvider theme={theme}>
-          <Story />
-        </ThemeProvider>
-      </I18nextProvider>
+      <QueryClientProvider client={queryClient}>
+        <I18nextProvider i18n={i18n}>
+          <ThemeProvider theme={theme}>
+            <Story />
+          </ThemeProvider>
+        </I18nextProvider>
+      </QueryClientProvider>
     )
   },
 ]
