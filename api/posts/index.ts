@@ -19,7 +19,7 @@ export const useGetPosts = () => {
 }
 
 interface GetPostParams {
-  readonly id: string | string[] | undefined
+  readonly id: string | undefined
 }
 
 const getPost = async ({
@@ -68,12 +68,12 @@ const createPost = async ({
   return response.data
 }
 
-interface CreateOfferCallback {
+interface CreatePostCallback {
   readonly onSuccess?: (data: Post) => void
   readonly onError?: (error: AxiosError) => void
 }
 
-export const useCreatePost = ({ onSuccess, onError }: CreateOfferCallback) => {
+export const useCreatePost = ({ onSuccess, onError }: CreatePostCallback) => {
   return useMutation(
     async ({ userId, title, description }: CreatePostParams) =>
       createPost({ userId, title, description }),

@@ -164,27 +164,6 @@ describe('[API] Posts', () => {
 
       expect(result?.current.fetchStatus).toBe('idle')
     })
-
-    it('idle with ID list', async () => {
-      const wrapper = ({ children }: { children: JSX.Element }) => (
-        <QueryClientProvider client={queryClient}>
-          {children}
-        </QueryClientProvider>
-      )
-      let result:
-        | {
-            current: UseQueryResult<Post, unknown>
-          }
-        | undefined
-
-      await act(async () => {
-        result = renderHook(() => useGetPost({ id: ['1', '2', '3'] }), {
-          wrapper,
-        }).result
-      })
-
-      expect(result?.current.fetchStatus).toBe('idle')
-    })
   })
 
   describe('useCreatePost', () => {
