@@ -95,12 +95,6 @@ exports[`<FloatingActionLink /> Rendered well with icon 1`] = `
   box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
 }
 
-.emotion-0.Mui-disabled {
-  color: rgba(0, 0, 0, 0.26);
-  box-shadow: none;
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
 .emotion-0:hover {
   background-color: #1565c0;
 }
@@ -109,6 +103,12 @@ exports[`<FloatingActionLink /> Rendered well with icon 1`] = `
   .emotion-0:hover {
     background-color: #1976d2;
   }
+}
+
+.emotion-0.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 .emotion-1 {
@@ -260,12 +260,6 @@ exports[`<FloatingActionLink /> Rendered well with string 1`] = `
   box-shadow: 0px 3px 5px -1px rgba(0,0,0,0.2),0px 6px 10px 0px rgba(0,0,0,0.14),0px 1px 18px 0px rgba(0,0,0,0.12);
 }
 
-.emotion-0.Mui-disabled {
-  color: rgba(0, 0, 0, 0.26);
-  box-shadow: none;
-  background-color: rgba(0, 0, 0, 0.12);
-}
-
 .emotion-0:hover {
   background-color: #1565c0;
 }
@@ -274,6 +268,12 @@ exports[`<FloatingActionLink /> Rendered well with string 1`] = `
   .emotion-0:hover {
     background-color: #1976d2;
   }
+}
+
+.emotion-0.Mui-disabled {
+  color: rgba(0, 0, 0, 0.26);
+  box-shadow: none;
+  background-color: rgba(0, 0, 0, 0.12);
 }
 
 .emotion-1 {
