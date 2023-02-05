@@ -23,9 +23,8 @@ describe('<Header />', () => {
     const appTitleLink = toolbar.props.children
     expect(appTitleLink.type.name).toBe('Link')
     expect(appTitleLink.props.href).toBe('/')
-    expect(appTitleLink.props.children.type).toBe('a')
 
-    const appTitle = appTitleLink.props.children.props.children
+    const appTitle = appTitleLink.props.children
     expect(appTitle.type.name).toBe('Typography')
     expect(appTitle.props.variant).toBe('h6')
     expect(appTitle.props.color).toBe('inherit')

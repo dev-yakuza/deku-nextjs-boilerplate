@@ -2,6 +2,7 @@ import { QueryClientProvider } from '@tanstack/react-query'
 import { render } from '@testing-library/react'
 import { AxiosError } from 'axios'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
+import type { NextRouter } from 'next/router'
 
 import type { CreatePostParams } from 'api/posts'
 import type { Post } from 'types'
@@ -44,18 +45,24 @@ jest.mock('api/posts', () => ({
 }))
 
 describe('<CreateBlogPost />', () => {
+  let mockRouter: NextRouter
+
   beforeEach(() => {
     mockAPISuccess = true
     mockIsLoading = false
     mockIsCalledOnSuccess = false
     mockIsCalledOnError = false
+
+    mockRouter = getMockRouter()
   })
 
   it('rendered well', () => {
     const { container } = render(
-      <QueryClientProvider client={queryClient}>
-        <CreateBlogPost />
-      </QueryClientProvider>,
+      <RouterContext.Provider value={mockRouter}>
+        <QueryClientProvider client={queryClient}>
+          <CreateBlogPost />
+        </QueryClientProvider>
+      </RouterContext.Provider>,
     )
 
     expect(mockCreateBlogPost.mock.calls.length).toBe(1)
@@ -71,9 +78,11 @@ describe('<CreateBlogPost />', () => {
     mockIsLoading = true
 
     render(
-      <QueryClientProvider client={queryClient}>
-        <CreateBlogPost />
-      </QueryClientProvider>,
+      <RouterContext.Provider value={mockRouter}>
+        <QueryClientProvider client={queryClient}>
+          <CreateBlogPost />
+        </QueryClientProvider>
+      </RouterContext.Provider>,
     )
 
     expect(mockCreateBlogPost.mock.calls[0][0].isCreating).toBe(true)
@@ -82,7 +91,6 @@ describe('<CreateBlogPost />', () => {
   it('success to create post', () => {
     mockAPISuccess = true
     const routerPush = jest.fn()
-    const mockRouter = getMockRouter()
     mockRouter.push = routerPush
 
     render(
@@ -112,9 +120,11 @@ describe('<CreateBlogPost />', () => {
     mockAPISuccess = false
 
     render(
-      <QueryClientProvider client={queryClient}>
-        <CreateBlogPost />
-      </QueryClientProvider>,
+      <RouterContext.Provider value={mockRouter}>
+        <QueryClientProvider client={queryClient}>
+          <CreateBlogPost />
+        </QueryClientProvider>
+      </RouterContext.Provider>,
     )
 
     expect(mockIsCalledOnSuccess).toBe(false)
