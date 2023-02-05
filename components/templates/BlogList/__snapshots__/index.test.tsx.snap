@@ -425,27 +425,31 @@ exports[`<BlogList /> Rendered well with data 1`] = `
         </p>
       </a>
     </div>
-    <button
-      aria-label="add"
-      class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-26"
-      tabindex="0"
-      type="button"
+    <a
+      href="/posts/add"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-27"
-        data-testid="AddIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="add"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-26"
+        tabindex="0"
+        type="button"
       >
-        <path
-          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-27"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root emotion-28"
         />
-      </svg>
-      <span
-        class="MuiTouchRipple-root emotion-28"
-      />
-    </button>
+      </button>
+    </a>
   </div>
 </div>
 `;
@@ -649,27 +653,31 @@ exports[`<BlogList /> Rendered well with no data 1`] = `
   <div
     class="MuiGrid-root MuiGrid-container emotion-1"
   >
-    <button
-      aria-label="add"
-      class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-2"
-      tabindex="0"
-      type="button"
+    <a
+      href="/posts/add"
     >
-      <svg
-        aria-hidden="true"
-        class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-3"
-        data-testid="AddIcon"
-        focusable="false"
-        viewBox="0 0 24 24"
+      <button
+        aria-label="add"
+        class="MuiButtonBase-root MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary MuiFab-root MuiFab-circular MuiFab-sizeLarge MuiFab-primary emotion-2"
+        tabindex="0"
+        type="button"
       >
-        <path
-          d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+        <svg
+          aria-hidden="true"
+          class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium emotion-3"
+          data-testid="AddIcon"
+          focusable="false"
+          viewBox="0 0 24 24"
+        >
+          <path
+            d="M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6v2z"
+          />
+        </svg>
+        <span
+          class="MuiTouchRipple-root emotion-4"
         />
-      </svg>
-      <span
-        class="MuiTouchRipple-root emotion-4"
-      />
-    </button>
+      </button>
+    </a>
   </div>
 </div>
 `;

@@ -1,13 +1,24 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
+import type { NextRouter } from 'next/router'
 
 import { mockToolbar, mockGrid, getMockRouter } from 'utils/test'
 
 import { BlogDetail } from '.'
 
 describe('<BlogDetail />', () => {
+  let mockRouter: NextRouter
+
+  beforeEach(() => {
+    mockRouter = getMockRouter()
+  })
+
   it('Skeleton is rendered with no data', async () => {
-    const { container } = render(<BlogDetail post={undefined} />)
+    const { container } = render(
+      <RouterContext.Provider value={mockRouter}>
+        <BlogDetail post={undefined} />
+      </RouterContext.Provider>,
+    )
 
     expect(mockToolbar.mock.calls.length).toBe(1)
 
@@ -60,14 +71,16 @@ describe('<BlogDetail />', () => {
 
   it('contents are rendered with data', async () => {
     const { container } = render(
-      <BlogDetail
-        post={{
-          userId: 1,
-          id: 1,
-          title: 'blog title 1',
-          body: 'blog contents 1',
-        }}
-      />,
+      <RouterContext.Provider value={mockRouter}>
+        <BlogDetail
+          post={{
+            userId: 1,
+            id: 1,
+            title: 'blog title 1',
+            body: 'blog contents 1',
+          }}
+        />
+      </RouterContext.Provider>,
     )
 
     const grid = mockGrid.mock.calls[0][0]

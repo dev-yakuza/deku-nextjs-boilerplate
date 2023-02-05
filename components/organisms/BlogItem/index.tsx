@@ -20,10 +20,8 @@ export const BlogItem = ({ id, title, body }: Props) => {
   return (
     <Container item xs={12}>
       <Link href={`/posts/${id}`}>
-        <a>
-          <Typography>{title}</Typography>
-          <Typography>{body}</Typography>
-        </a>
+        <Typography>{title}</Typography>
+        <Typography>{body}</Typography>
       </Link>
     </Container>
   )

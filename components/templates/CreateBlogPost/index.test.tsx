@@ -1,5 +1,6 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
+import type { NextRouter } from 'next/router'
 import { act } from 'react-dom/test-utils'
 
 import { mockToolbar, mockGrid, getMockRouter, mockTextField } from 'utils/test'
@@ -7,8 +8,18 @@ import { mockToolbar, mockGrid, getMockRouter, mockTextField } from 'utils/test'
 import { CreateBlogPost } from '.'
 
 describe('<CreateBlogPost />', () => {
+  let mockRouter: NextRouter
+
+  beforeEach(() => {
+    mockRouter = getMockRouter()
+  })
+
   it('Form is rendered well', async () => {
-    const { container } = render(<CreateBlogPost />)
+    const { container } = render(
+      <RouterContext.Provider value={mockRouter}>
+        <CreateBlogPost />
+      </RouterContext.Provider>,
+    )
 
     expect(mockToolbar.mock.calls.length).toBe(1)
 
@@ -93,7 +104,6 @@ describe('<CreateBlogPost />', () => {
 
   it('Go to posts page when back button is clicked', async () => {
     const routerPush = jest.fn()
-    const mockRouter = getMockRouter()
     mockRouter.push = routerPush
 
     render(
@@ -108,7 +118,11 @@ describe('<CreateBlogPost />', () => {
   })
 
   it('Show and hide error messages', async () => {
-    render(<CreateBlogPost />)
+    render(
+      <RouterContext.Provider value={mockRouter}>
+        <CreateBlogPost />
+      </RouterContext.Provider>,
+    )
 
     let grid = mockGrid.mock.calls[0][0]
     let createBlogPost = grid.children
@@ -181,7 +195,11 @@ describe('<CreateBlogPost />', () => {
   })
 
   it('The create button is disabled when isCreating is true', async () => {
-    render(<CreateBlogPost isCreating={true} />)
+    render(
+      <RouterContext.Provider value={mockRouter}>
+        <CreateBlogPost isCreating={true} />
+      </RouterContext.Provider>,
+    )
 
     const grid = mockGrid.mock.calls[0][0]
     const createBlogPost = grid.children
@@ -201,12 +219,14 @@ describe('<CreateBlogPost />', () => {
     let descriptionData = ''
 
     render(
-      <CreateBlogPost
-        onCreatePost={(title, description) => {
-          titleData = title
-          descriptionData = description
-        }}
-      />,
+      <RouterContext.Provider value={mockRouter}>
+        <CreateBlogPost
+          onCreatePost={(title, description) => {
+            titleData = title
+            descriptionData = description
+          }}
+        />
+      </RouterContext.Provider>,
     )
 
     let grid = mockGrid.mock.calls[0][0]
