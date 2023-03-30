@@ -3,6 +3,7 @@ import { Grid, Toolbar } from '@mui/material'
 
 import { FloatingActionLink } from 'components/atoms'
 import { BlogItem } from 'components/organisms'
+
 import type { Post } from 'types'
 
 interface Props {

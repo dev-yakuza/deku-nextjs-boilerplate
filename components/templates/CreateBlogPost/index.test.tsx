@@ -1,9 +1,10 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
-import type { NextRouter } from 'next/router'
 import { act } from 'react-dom/test-utils'
 
 import { mockToolbar, mockGrid, getMockRouter, mockTextField } from 'utils/test'
+
+import type { NextRouter } from 'next/router'
 
 import { CreateBlogPost } from '.'
 

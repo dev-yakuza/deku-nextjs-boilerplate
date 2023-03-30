@@ -1,8 +1,9 @@
-import type { NextPage } from 'next'
 import { useRouter } from 'next/router'
 
 import { useGetPost } from 'api/posts'
 import { BlogDetail } from 'components/templates'
+
+import type { NextPage } from 'next'
 
 const PostDetailPage: NextPage = () => {
   const router = useRouter()
