@@ -2,12 +2,13 @@ import '../styles/globals.css'
 import { ThemeProvider } from '@mui/material'
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query'
 import { appWithTranslation } from 'next-i18next'
-import type { AppProps } from 'next/app'
 import { RecoilRoot } from 'recoil'
 
 import { PageContainer } from 'components/atoms'
 import { Header } from 'components/organisms'
 import { theme } from 'utils/theme'
+
+import type { AppProps } from 'next/app'
 
 const queryClient = new QueryClient({
   defaultOptions: {

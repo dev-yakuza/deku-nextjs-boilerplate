@@ -1,8 +1,8 @@
-import type { NextPage } from 'next'
-
 import { useGetPosts } from 'api/posts'
 import { PageLoading } from 'components/atoms'
 import { BlogList } from 'components/templates'
+
+import type { NextPage } from 'next'
 
 const BlogListPage: NextPage = () => {
   const { isLoading, data } = useGetPosts()
