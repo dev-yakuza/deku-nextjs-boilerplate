@@ -1,7 +1,7 @@
 import { fireEvent, render, screen } from '@testing-library/react'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 
-import { mockToolbar, mockGrid, getMockRouter } from 'utils/test'
+import { getMockRouter, mockGrid, mockToolbar } from 'utils/test'
 
 import type { NextRouter } from 'next/router'
 
