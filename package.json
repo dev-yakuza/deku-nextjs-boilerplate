@@ -71,7 +71,7 @@
     "axios-mock-adapter": "^1.21.2",
     "babel-loader": "^9.1.2",
     "cspell": "^6.31.1",
-    "eslint": "8.28.0",
+    "eslint": "8.41.0",
     "eslint-config-next": "13.2.4",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-storybook": "^0.6.11",
