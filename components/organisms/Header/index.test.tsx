@@ -1,7 +1,7 @@
-import { render, screen, fireEvent } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 
-import { mockAppBar, getMockRouter } from 'utils/test'
+import { getMockRouter, mockAppBar } from 'utils/test'
 
 import { Header } from '.'
 

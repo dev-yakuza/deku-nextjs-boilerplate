@@ -1,8 +1,8 @@
 import AddIcon from '@mui/icons-material/Add'
-import { render, screen, fireEvent } from '@testing-library/react'
+import { fireEvent, render, screen } from '@testing-library/react'
 import { RouterContext } from 'next/dist/shared/lib/router-context'
 
-import { mockLink, getMockRouter } from 'utils/test'
+import { getMockRouter, mockLink } from 'utils/test'
 
 import { FloatingActionLink } from '.'
 

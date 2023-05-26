@@ -1,6 +1,6 @@
 import AddIcon from '@mui/icons-material/Add'
 
-import type { ComponentStory, ComponentMeta } from '@storybook/react'
+import type { ComponentMeta, ComponentStory } from '@storybook/react'
 
 import { FloatingActionLink } from '.'
 
