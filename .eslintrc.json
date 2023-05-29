@@ -1,6 +1,6 @@
 {
-  "extends": "next/core-web-vitals",
-  "plugins": ["@typescript-eslint"],
+  "extends": ["next/core-web-vitals", "plugin:storybook/recommended"],
+  "plugins": ["@typescript-eslint", "no-null"],
   "rules": {
     "no-console": ["error", { "allow": ["debug", "warn", "error"] }],
     "@typescript-eslint/no-unused-vars": "error",
@@ -41,6 +41,9 @@
       }
     ],
     "react/react-in-jsx-scope": "off",
-    "@typescript-eslint/consistent-type-imports": "error"
+    "@typescript-eslint/consistent-type-imports": "error",
+    "no-null/no-null": 2,
+    "curly": ["error", "multi-line", "consistent"],
+    "nonblock-statement-body-position": ["error", "beside"]
   }
 }
