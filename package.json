@@ -73,7 +73,7 @@
     "babel-loader": "^9.1.2",
     "cspell": "^6.31.1",
     "eslint": "8.41.0",
-    "eslint-config-next": "13.2.4",
+    "eslint-config-next": "13.4.9",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-no-null": "^1.0.2",
     "eslint-plugin-storybook": "^0.6.11",
